@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
+    <title>Electron App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <div class="container">
+        <header class="hero">
+            <div class="hero-content">
+                <h1 class="title">
+                    <span class="title-main">Electron</span>
+                    <span class="title-accent">App</span>
+                </h1>
+                <p class="subtitle">Modern Desktop Application Framework</p>
+                <div class="badge-container">
+                    <span class="badge">⚡ Fast</span>
+                    <span class="badge">🔒 Secure</span>
+                    <span class="badge">💎 Modern</span>
+                </div>
+            </div>
+        </header>
+        
+        <main class="content">
+            <section class="card glass-card">
+                <div class="card-icon">🚀</div>
+                <h2 class="card-title">Main Process</h2>
+                <p class="card-description">The main process manages the application lifecycle, creates renderer processes, and controls the native desktop environment.</p>
+                <div class="card-footer">
+                    <span class="tag">Node.js</span>
+                    <span class="tag">System APIs</span>
+                </div>
+            </section>
+            
+            <section class="card glass-card">
+                <div class="card-icon">✨</div>
+                <h2 class="card-title">Renderer Process</h2>
+                <p class="card-description">This beautiful interface runs in a renderer process, powered by Chromium and rendering your HTML/CSS/JavaScript.</p>
+                <div class="card-footer">
+                    <span class="tag">Chromium</span>
+                    <span class="tag">Web Tech</span>
+                </div>
+            </section>
+            
+            <section class="card glass-card">
+                <div class="card-icon">🛠️</div>
+                <h2 class="card-title">Development</h2>
+                <p class="card-description">Start building by editing these core files to customize your application:</p>
+                <div class="file-list">
+                    <div class="file-item">
+                        <code class="file-name">main.js</code>
+                        <span class="file-desc">Main process file</span>
+                    </div>
+                    <div class="file-item">
+                        <code class="file-name">index.html</code>
+                        <span class="file-desc">Renderer HTML</span>
+                    </div>
+                    <div class="file-item">
+                        <code class="file-name">styles.css</code>
+                        <span class="file-desc">Styling</span>
+                    </div>
+                    <div class="file-item">
+                        <code class="file-name">preload.js</code>
+                        <span class="file-desc">Preload script</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="card glass-card featured">
+                <div class="card-icon">⚡</div>
+                <h2 class="card-title">Get Started</h2>
+                <p class="card-description">Ready to build something amazing? Install dependencies and start developing!</p>
+                <div class="command-box">
+                    <code class="command">npm install</code>
+                    <code class="command">npm start</code>
+                </div>
+            </section>
+            
+            <section class="card glass-card system-info-card">
+                <div class="card-icon">💻</div>
+                <h2 class="card-title">System Information</h2>
+                <p class="card-description">Click the button below to view your system information.</p>
+                <button id="systemInfoBtn" class="info-button">
+                    <span>Show System Info</span>
+                </button>
+                <div id="systemInfo" class="system-info-display" style="display: none;">
+                    <div class="info-item">
+                        <span class="info-label">Operating System:</span>
+                        <span class="info-value" id="osType"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Platform:</span>
+                        <span class="info-value" id="platform"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Version:</span>
+                        <span class="info-value" id="osVersion"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Architecture:</span>
+                        <span class="info-value" id="arch"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Total Memory:</span>
+                        <span class="info-value" id="totalMemory"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Free Memory:</span>
+                        <span class="info-value" id="freeMemory"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">CPU Cores:</span>
+                        <span class="info-value" id="cpuCount"></span>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <p>Built with ❤️ using Electron</p>
+            <div class="footer-links">
+                <span>Version 1.0.0</span>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="renderer.js"></script>
+</body>
+</html>
